@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+	<link rel="stylesheet" href="css/style.css">
+</head>
+<body ng-app="store">
+
+	<!--<div class="container" ng-controller="StoreController as store">
+	<div class="panel panel-default" ng-hide="store.product.soldOut">
+		<h1>Product Name: {{store.product.name}}</h1>
+		<h2>Porduct Price: ${{store.product.price}}</h2>
+		<p>Description: {{store.product.description}}</p>
+		<button class="btn btn-primary" ng-show="store.product.canPurchase">Add to Cart</button>
+		<div class="alert alert-danger" ng-show="!store.product.canPurchase">Este producto no se encuentra disponible</div>
+	</div>
+	</div>-->
+
+	<div class="container">
+			<div ng-controller="StoreController as store">
+				<div class="row" ng-repeat="product in store.products">			
+					<div class="col-lg-12">				
+							<div class="row">
+								<div class="col-lg-6">
+									<h1>{{product.name}}</h1>
+								</div>
+								<div class="col-lg-6">
+									<h2>{{product.price | currency: $}}</h2>
+								</div>
+							</div>
+						<div class="row">
+								<div class="col-lg-3">
+									<img src="{{product.imagen}}" >
+								</div>
+								<div class="col-lg-3">
+									<p>{{product.description}}</p>
+								</div>
+							<div class="row">
+								<button class="btn btn-primary" ng-show="!product.canPurchase">Add to Cart</button>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+	</div>
+
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.3/angular.min.js"></script>
+	<script src="js/app.js"></script>
+	
+</body>
+</html>

@@ -1,0 +1,12 @@
+body{
+	background:	url('http://st2.depositphotos.com/1066473/9578/i/950/depositphotos_95788008-stock-photo-jewelry-pendant-with-gems-on.jpg');
+	background-size: 400% 100%;
+}
+img{
+	width: 200px;
+	height: 150px;
+}
+
+h1,h2,p{
+	color: white;
+}
